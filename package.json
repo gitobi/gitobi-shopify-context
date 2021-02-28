@@ -2,8 +2,9 @@
   "name": "@gitobi/gitobi-shopify-context",
   "version": "1.0.0",
   "description": "Provide EC feature for gitobi shopify store",
-  "main": "index.js",
+  "main": "build/index.js",
   "scripts": {
+    "build": "babel src -d build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,5 +25,10 @@
   "dependencies": {
     "react": "^16.13.1",
     "shopify-buy": "^2.11.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.0",
+    "@babel/core": "^7.13.8",
+    "@babel/preset-react": "^7.12.13"
   }
 }
