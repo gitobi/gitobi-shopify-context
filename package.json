@@ -1,0 +1,28 @@
+{
+  "name": "@gitobi/gitobi-shopify-context",
+  "version": "1.0.0",
+  "description": "Provide EC feature for gitobi shopify store",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gitobi/gitobi-shopify-context.git"
+  },
+  "keywords": [
+    "gitobi",
+    "shopify",
+    "ec"
+  ],
+  "author": "deraru",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gitobi/gitobi-shopify-context/issues"
+  },
+  "homepage": "https://github.com/gitobi/gitobi-shopify-context#readme",
+  "dependencies": {
+    "react": "^16.13.1",
+    "shopify-buy": "^2.11.0"
+  }
+}
