@@ -8,7 +8,7 @@
 
 # Publish
 
-- `npm version [major|minor|patch]`
 - `git commit -am 'Bump version to vX.X.X'`
+- `npm version [major|minor|patch]`
 - `npm run build`
-- `npm run publish --access public`
+- `npm publish --access publish`
