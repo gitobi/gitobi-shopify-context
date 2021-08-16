@@ -1,6 +1,6 @@
 {
   "name": "@gitobi/gitobi-shopify-context",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Provide EC feature for gitobi shopify store",
   "main": "build/index.js",
   "scripts": {
