@@ -3,7 +3,7 @@ import Client from "shopify-buy"
 
 import StoreContext from "./store-context"
 
-const StoreProvider = ({ children }) => {
+const StoreProvider = (props) => {
   const client = Client.buildClient(
     {
       storefrontAccessToken: process.env.GATSBY_SHOPIFY_ACCESS_TOKEN,
@@ -125,9 +125,7 @@ const StoreProvider = ({ children }) => {
   }
 
   useEffect(() => {
-    const initializeCheckout = async () => {
-      const localStorageKey = 'shopify_checkout_id'
-
+    const initializeCheckout = async (localStorageKey) => {
       const setCheckout = (checkout) => {
         localStorage.setItem(localStorageKey, checkout.id)
         setStore((prevState) => {
@@ -163,7 +161,7 @@ const StoreProvider = ({ children }) => {
       }
     }
 
-    initializeCheckout()
+    initializeCheckout(props.localStorageKey)
   }, [store.client.checkout])
 
   return (
@@ -177,7 +175,7 @@ const StoreProvider = ({ children }) => {
         proceedToCheckout: proceedToCheckout,
       }}
     >
-      {children}
+      {props.children}
     </StoreContext.Provider>
   )
 }
